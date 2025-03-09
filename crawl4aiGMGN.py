@@ -39,7 +39,6 @@ async def main():
                 if label in ["NoMint", "Blacklist"]:
                     value_div = div.find("div", class_="css-171onha")
                     if value_div:
-                        # Assume the first <p> inside contains the risk value
                         value_tag = value_div.find("p")
                         if value_tag:
                             risk_value = value_tag.get_text(strip=True)
